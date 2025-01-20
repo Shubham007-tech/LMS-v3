@@ -1,0 +1,44 @@
+/* CategoryPage.css */
+
+.category-page {
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .category-page-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .category-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .category-card {
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .category-card:hover {
+    background-color: #e9f5ff;
+    transform: scale(1.05);
+  }
+  
+  .category-name {
+    font-size: 1.2rem;
+    color: #0073e6;
+    margin: 0;
+  }
+  

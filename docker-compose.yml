@@ -1,0 +1,25 @@
+version: '3'
+services:
+  backend:
+    build: ./Backend-Api
+    container_name: backend
+    ports:
+      - "5000:5000"  # Expose backend port
+    environment:
+      - MONGO_URI=mongodb+srv://Shubham-youtube:9835@youtubecluster.m2l3i.mongodb.net/videosdb  # Add your MongoDB connection string here
+    networks:
+      - lms-network
+
+  frontend:
+    build: ./lms
+    container_name: frontend
+    ports:
+      - "3000:3000"  # Expose frontend port
+    depends_on:
+      - backend
+    networks:
+      - lms-network
+
+networks:
+  lms-network:
+    driver: bridge
